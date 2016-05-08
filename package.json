@@ -1,0 +1,42 @@
+{
+  "name": "conditional-assignment-tests",
+  "version": "0.0.1",
+  "description": "Reference tests for conditional assignment operator implementations",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doug-wade/conditional-assignment-tests.git"
+  },
+  "keywords": [
+    "conditional",
+    "assignment",
+    "or",
+    "equals",
+    "reference",
+    "tc39",
+    "es2017"
+  ],
+  "author": "Doug Wade <doug@dougwade.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doug-wade/conditional-assignment-tests/issues"
+  },
+  "homepage": "https://github.com/doug-wade/conditional-assignment-tests#readme",
+  "dependencies": {
+    "babylon": "../babylon",
+    "babel-plugin-transform-conditional-assignment": "../babel/packages/babel-plugin-transform-conditional-assignment",
+    "babel-plugin-syntax-conditional-assignment": "../babel/packages/babel-plugin-syntax-conditional-assignment"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0"
+  },
+  "ava": {
+    "babel": {
+      "plugins": ["transform-conditional-assignment", "syntax-conditional-assignment"],
+      "presets": ["es2015", "stage-2"]
+    }
+  }
+}
